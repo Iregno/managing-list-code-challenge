@@ -1,4 +1,4 @@
-/* Base Reset */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,103 +6,95 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(145deg, #e6e9f0, #f2f3f5);
-  color: #1c1c1e;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #222;
   padding: 2rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
 }
 
 header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 header h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #000;
-  letter-spacing: -0.5px;
+  font-size: 1.8rem;
+  color: #222;
 }
 
 header p {
   font-size: 1rem;
   color: #555;
-  margin-top: 0.5rem;
 }
 
+/* Form */
 form {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(20px);
-  border-radius: 24px;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  padding: 1.25rem;
+  border-radius: 10px;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  transition: all 0.3s ease;
+  max-width: 500px;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.5rem;
 }
 
 label {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #333;
-  font-weight: 500;
 }
 
 input {
-  padding: 0.9rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 14px;
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  color: #000;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
 }
 
-input:focus {
-  outline: none;
-  border-color: #007aff;
-  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
-}
-
+/* Submit Button */
 button.submit {
-  margin-top: 1.2rem;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 14px;
-  background: #007aff;
-  color: white;
-  font-weight: 600;
+  margin-top: 1rem;
+  padding: 0.6rem;
   font-size: 1rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 button.submit:hover {
-  background: #005ce6;
-  transform: translateY(-1px);
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
 }
 
+/* Guest Count */
 #current-count {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #007aff;
-  margin-top: 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #007bff;
 }
 
+/* Guest List Section */
 .guest-list-section {
-  max-width: 500px;
   width: 100%;
+  max-width: 500px;
 }
 
 /* Guest List */
@@ -115,23 +107,22 @@ button.submit:hover {
 }
 
 .guest-item {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
-  border-radius: 18px;
-  padding: 1rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, background 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .guest-item:hover {
-  transform: scale(1.015);
-  background: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: scale(1.01);
 }
 
+/* Guest Info */
 .guest-info {
   display: flex;
   flex-direction: column;
@@ -139,69 +130,56 @@ button.submit:hover {
 
 .guest-name {
   font-weight: 600;
-  font-size: 1.05rem;
 }
 
 .rsvp-status {
-  margin-top: 4px;
-  padding: 4px 10px;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
   width: fit-content;
+  color: white;
 }
 
 .attending {
-  background: #34c759;
-  color: white;
+  background-color: #28a745;
 }
 
 .not-attending {
-  background: #ff3b30;
-  color: white;
+  background-color: #dc3545;
 }
 
-/* Action Buttons */
-.guest-actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
+/* Guest Action Buttons */
 .guest-actions button {
-  padding: 0.7rem 1.2rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border: none;
-  border-radius: 2rem; /* More rounded */
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  margin-left: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: rgba(240, 240, 240, 0.8);
   cursor: pointer;
-  backdrop-filter: blur(14px);
-  color: #fff;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.toggle-rsvp-btn {
-  background: linear-gradient(135deg, #34c759, #30d158);
-}
-
-.toggle-rsvp-btn:hover {
-  background: linear-gradient(135deg, #2ec44f, #28b851);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(52, 199, 89, 0.4);
+.guest-actions button:hover {
+  background-color: rgba(230, 230, 230, 1);
+  transform: scale(1.05);
 }
 
 .remove-guest-btn {
-  background: linear-gradient(135deg, #ff3b30, #ff453a);
-  margin-left: 0.75rem;
+  color: #a00;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
 }
 
 .remove-guest-btn:hover {
-  background: linear-gradient(135deg, #e02d24, #e93b35);
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 69, 58, 0.4);
-}
-.guest-actions button:active {
-  transform: scale(0.97);
-  box-shadow: none;
+  background-color: #f5b5ba;
 }
 
+/* Empty State */
+.empty-state {
+  margin-top: 1rem;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
