@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guest List Manager</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div>
+    <header>
+      <h1>Event Guest List Manager</h1>
+      <p>Manage your guest lists with so much ease 😇</p>
+    </header>
+
+    <main>
+      <!-- Input Section -->
+      <section class="input">
+<form id="guest-form">
+  <div class="form-group">
+    <label for="guest-name">Guest Name</label>
+    <input 
+      type="text"
+      id="guest-name"
+      placeholder="Enter guest name"
+      required
+    >
+    <label for="guest-mood">Mood</label>
+    <select id="guest-mood">
+      <option value="Happy">Vibezz</option>
+      <option value="Chill">Chill</option>
+      <option value="Hype">Hypebeast</option>
+    </select>
+    <button class="submit" id="add-guest-btn">Add guest</button>
+  </div>
+</form>
+
+      </section>
+
+<!-- Guest List Section -->
+<section class="guest-list-section">
+  <h2>Guest List</h2>
+
+  <ul id="guest-list" class="guest-list">
+    <!-- JS will populate this -->
+  </ul>
+
+  <div id="empty-state" class="empty-state">
+    <p>No guests added yet. Add your guest above!</p>
+  </div>
+</section>
+
+    </main>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
