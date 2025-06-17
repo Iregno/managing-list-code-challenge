@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     //creating a new list item
     let listItem = document.createElement("li");
-    listItem.className = "guest-item new-glow";
+    listItem.className = "guest-item";
 
     //create infor section with guest name and status
     let infoSection = document.createElement("div");
